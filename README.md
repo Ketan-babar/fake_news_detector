@@ -1,3 +1,5 @@
+mermaid
+
 flowchart TD
     A[Fake.csv / True.csv<br/>(Raw News Data)]
     B[Data Ingestion<br/>• Load CSV files<br/>• Assign labels]
@@ -11,6 +13,7 @@ flowchart TD
     C --> D
     D --> E
     E --> F
+
 
 
 Logical Flow Architecture (Pipeline View)
