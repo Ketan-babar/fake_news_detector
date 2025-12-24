@@ -2,11 +2,11 @@
 
 
 
-Logical Flow Architecture (Pipeline View)
+**Logical Flow Architecture (Pipeline View)**
 
 This explains what happens when the script runs.
 
-Step 1: Data Ingestion
+**Step 1: Data Ingestion**
 
 Load Fake.csv and True.csv
 Assign labels:
@@ -15,7 +15,7 @@ REAL
 Merge into a single DataFrame
 
 
-Step 2: Text Preprocessing
+__Step 2: Text Preprocessing__
 
 For each news article:
 Convert to lowercase
@@ -24,7 +24,7 @@ Remove stopwords (NLTK)
 Normalize whitespace
 
 
-Step 3: Feature Engineering (TF-IDF)
+**Step 3: Feature Engineering (TF-IDF)**
 
 Convert cleaned text into numerical vectors
 Capture:
@@ -33,21 +33,21 @@ Frequency-based relevance
 Limit features for efficiency
 
 
-Step 4: Train–Test Split
+**Step 4: Train–Test Split**
 
 Split dataset into:
 Training set
 Testing set
 
 
-Step 5: Model Training
+**Step 5: Model Training**
 
 Algorithm: Logistic Regression
 Train on TF-IDF vectors
 
 
 
-Step 6: Evaluation
+**Step 6: Evaluation**
 
 Predict on test data
 Calculate:
