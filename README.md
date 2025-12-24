@@ -1,18 +1,43 @@
-mermaid
+flowchart LR
+    subgraph Data_Layer["🗂️ Data Layer"]
+        A1[Fake.csv<br/>(Fake News)]
+        A2[True.csv<br/>(Real News)]
+    end
 
-flowchart TD
-    A[Fake.csv / True.csv<br/>(Raw News Data)]
-    B[Data Ingestion<br/>• Load CSV files<br/>• Assign labels]
-    C[Text Preprocessing<br/>• Lowercasing<br/>• Regex cleaning<br/>• Stopword removal]
-    D[Feature Engineering<br/>TF-IDF Vectorization]
-    E[ML Model<br/>Logistic Regression]
-    F[Evaluation Layer<br/>Accuracy • Confusion Matrix • F1-score]
+    subgraph Ingestion["📥 Data Ingestion"]
+        B[Load CSV Files<br/>Assign Labels<br/>Merge Dataset]
+    end
 
-    A --> B
-    B --> C
-    C --> D
+    subgraph Preprocessing["🧹 Text Preprocessing"]
+        C1[Lowercasing]
+        C2[Regex Cleaning]
+        C3[Stopword Removal]
+    end
+
+    subgraph Feature_Engineering["🧠 Feature Engineering"]
+        D[TF-IDF Vectorization]
+    end
+
+    subgraph Model["🤖 ML Model"]
+        E[Logistic Regression Classifier]
+    end
+
+    subgraph Evaluation["📊 Evaluation Layer"]
+        F1[Accuracy]
+        F2[Confusion Matrix]
+        F3[F1-Score]
+    end
+
+    %% Flow connections
+    A1 --> B
+    A2 --> B
+    B --> C1 --> C2 --> C3
+    C3 --> D
     D --> E
-    E --> F
+    E --> F1
+    E --> F2
+    E --> F3
+
 
 
 
