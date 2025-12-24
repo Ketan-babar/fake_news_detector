@@ -1,28 +1,17 @@
-PROJECT ARCHITECTURE:
-┌────────────────────┐
-│   Data Layer       │
-│ (CSV files)        │
-└─────────┬──────────┘
-          ↓
-┌────────────────────┐
-│ Preprocessing      │
-│ (cleaning text)    │
-└─────────┬──────────┘
-          ↓
-┌────────────────────┐
-│ Feature Engineering│
-│ (TF-IDF)           │
-└─────────┬──────────┘
-          ↓
-┌────────────────────┐
-│ ML Model           │
-│ (Logistic Reg.)    │
-└─────────┬──────────┘
-          ↓
-┌────────────────────┐
-│ Evaluation Layer   │
-│ (Accuracy, CM)    │
-└────────────────────┘
+flowchart TD
+    A[Fake.csv / True.csv<br/>(Raw News Data)]
+    B[Data Ingestion<br/>• Load CSV files<br/>• Assign labels]
+    C[Text Preprocessing<br/>• Lowercasing<br/>• Regex cleaning<br/>• Stopword removal]
+    D[Feature Engineering<br/>TF-IDF Vectorization]
+    E[ML Model<br/>Logistic Regression]
+    F[Evaluation Layer<br/>Accuracy • Confusion Matrix • F1-score]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+
 
 Logical Flow Architecture (Pipeline View)
 
