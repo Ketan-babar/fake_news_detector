@@ -1,15 +1,5 @@
-fake_news_detector/
-├── data/
-│   ├── Fake.csv
-│   └── True.csv
-├── src/
-│   ├── preprocessing.py
-│   ├── feature_engineering.py
-│   ├── model.py
-│   └── evaluation.py
-├── main.py
-├── requirements.txt
-└── README.md
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0af71e14-cff3-4d65-b0e2-a9bd96a9571e" />
+
 
 
 Logical Flow Architecture (Pipeline View)
